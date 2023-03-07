@@ -1,25 +1,31 @@
 <template>
   <main class="p-5 my-0 mx-auto bg-white">
     <input id="tab1" type="radio" name="tabs" checked>
-    <label for="tab1">Section 1</label>
-    <section id="content1"><p>Maecenas nec semper ante, pellentesque posuere lorem. Nullam ipsum massa, consequat eget urna ut, pulvinar dignissim lorem. Nulla facilisi. Nam mattis eleifend metus. Fusce at commodo lorem. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus pellentesque elit sem, vel blandit posuere.</p></section>
+    <label for="tab1">{{ data[0].title }}</label>
+    <section id="content1" v-html="data[0].content"></section>
 
     <input id="tab2" type="radio" name="tabs">
-    <label for="tab2">Section 2</label>
-    <section id="content2"><p>Mauris a orci sodales, scelerisque velit vitae, gravida nisl. Ut non laoreet eros, vel laoreet nisi. Praesent sed dolor dui. Proin non fringilla quam. Aliquam erat volutpat. Vestibulum vel arcu semper, lobortis turpis ac, ultricies nisi. Praesent id.</p></section>
+    <label for="tab2">{{ data[1].title }}</label>
+    <section id="content2" v-html="data[1].content"></section>
 
     <input id="tab3" type="radio" name="tabs">
-    <label for="tab3">Section 3</label>
-    <section id="content3"><p>Sed elementum sapien ut sapien imperdiet, eu venenatis enim rhoncus. Praesent euismod tincidunt rhoncus. Duis cras amet:</p><ul><li>List item one</li><li>List item two</li><li>List item three</li></ul></section>
+    <label for="tab3">{{ data[2].title }}</label>
+    <section id="content3" v-html="data[2].content"></section>
 
     <input id="tab4" type="radio" name="tabs">
-    <label for="tab4">Section 4</label>
-    <section id="content4"><p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est.</p><p>Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p></section>
+    <label for="tab4">{{ data[3].title }}</label>
+    <section id="content4" v-html="data[3].content"></section>
   </main>
 </template>
 
 <script>
+import DataJson from '../../../data.json'
 export default {
+  data() {
+    return {
+      data: DataJson
+    }
+  }
 }
 </script>
 
