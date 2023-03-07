@@ -1,5 +1,5 @@
 
-##### Project Setup
+## Project Setup
 1. Open folder vue-frontend-assessment.
 2. npm install
 3. npm run serve
