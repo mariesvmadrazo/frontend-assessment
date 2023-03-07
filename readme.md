@@ -6,4 +6,4 @@
 
 ---
 
-## The answers for Exercise 1, Exercise 2 and Bonus were written correspondingly under /src/components folder.
+## The answers for Exercise 1, Exercise 2 and Bonus were written correspondingly under vue-frontend-assessment/src/components folder.
